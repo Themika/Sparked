@@ -1,0 +1,54 @@
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.long-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: left; /* Ensure text aligns left */
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Start off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.long-card-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.text {
+  flex: 1;
+  order: 1; /* Move text to the right */
+}
+
+.text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.long-card-image {
+  flex: 1;
+  order: 1; /* Move image to the left */
+  text-align: right;
+}
+
+.long-card-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; 
+}

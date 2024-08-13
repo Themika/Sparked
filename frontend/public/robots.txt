@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+//What is Spark Podcast?
+/* Welcome to SPARK, the podcast where students Armaan Moom and Sagar
+          Garg dive into the world of youth leadership, success, and the
+          challenges we face today! Our mission is to provide insight and to
+          inspire our generation. Let’s spark some inspiration together!*/
