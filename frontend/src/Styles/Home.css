@@ -141,6 +141,54 @@ html {
   background-color: #000000;
   color: #ffffff;
 }
+.recent-episodes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns the h1 to the top left */
+  gap: 20px; /* Adds space between the h1 and the cards */
+  position: relative; /* For positioning the hash effect */
+  margin: 50px;
+}
+
+.recent-episodes-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line if there are too many items */
+  gap: 50px; /* Adds space between the items */
+}
+
+.recent-episodes-h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  color: #fff; /* Text color white */
+  position: relative;
+}
+
+.recent-episodes-h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #6e6eff; /* Purple underline */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  box-shadow: 0 0 8px #8a2be2;
+}
+
+.recent-episodes::before {
+  content: "#";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  font-size: 100px;
+  color: rgba(110, 110, 255, 0.1); /* Light purple hash */
+  z-index: -1;
+}
+
+
+
 /* Animations */
 
 @keyframes fadeIn {

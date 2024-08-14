@@ -8,6 +8,7 @@ const streamingPage = () => {
             <div className="navbar-container">
                 <Navbar />
             </div>
+            
         </div>
     );
 }

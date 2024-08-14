@@ -1,3 +1,4 @@
+import Card from "../Components/Card";
 import Navbar from "../Components/Navbar";
 import LongCard from "../Components/longCard";
 import "../Styles/Home.css";
@@ -67,12 +68,13 @@ const Home = () => {
           text="Welcome to SPARK, the podcast where students Armaan Moom and Sagar Garg dive into the world of youth leadership, success, and the challenges we face today! Our mission is to provide insight and to inspire our generation. Let’s spark some inspiration together!"
         />
       </div>
-      <div className="hosts-area">
-        <LongCard
-          title="Meet the Hosts"
-          text="Get to know Armaan Moom and Sagar Garg, the passionate hosts of SPARK Podcast. How they bring their unique perspectives and experiences to every episode, sparking insightful discussions and engaging with inspiring guests."
-          variant="right"
-        />
+      <div className="recent-episodes">
+        <h1 className="recent-episodes-h1">Recent Episodes</h1>
+        <div className="recent-episodes-cards">
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
       <div className="why-listen-area">
         <LongCard
@@ -81,10 +83,10 @@ const Home = () => {
           variant="left"
         />
       </div>
-      <div className="Join-the-community">
+      <div className="hosts-area">
         <LongCard
-          title="Join the Community"
-          text="Join the SPARK community and connect with like-minded individuals who share your passion for leadership, success, and personal growth. Stay updated on the latest episodes, events, and opportunities to engage with the SPARK community. Share your thoughts, ideas, and experiences, and be part of a supportive network that inspires and empowers you to achieve your goals."
+          title="Meet the Hosts"
+          text="Get to know Armaan Moom and Sagar Garg, the passionate hosts of SPARK Podcast. How they bring their unique perspectives and experiences to every episode, sparking insightful discussions and engaging with inspiring guests."
           variant="right"
         />
       </div>
