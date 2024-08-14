@@ -25,7 +25,7 @@ const scrollEffect = () => {
   );
 
   const cardElements = document.querySelectorAll(
-    ".long-card-container.left, .long-card-container.right"
+    ".long-card-container.left, .long-card-container.right, .recent-episodes"
   );
   cardElements.forEach((el) => {
     observer.observe(el);
@@ -37,7 +37,6 @@ const scrollEffect = () => {
     });
   };
 };
-
 const Home = () => {
   useEffect(() => {
     const cleanup = scrollEffect();
@@ -69,12 +68,15 @@ const Home = () => {
         />
       </div>
       <div className="recent-episodes">
-        <h1 className="recent-episodes-h1">Recent Episodes</h1>
-        <div className="recent-episodes-cards">
-          <Card />
-          <Card />
-          <Card />
+        <div className="recent-episodes-content">
+          <h1 className="recent-episodes-h1">Recent Episodes</h1>
+          <div className="recent-episodes-cards">
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
+        <div className="hash1"></div>
       </div>
       <div className="why-listen-area">
         <LongCard
@@ -85,8 +87,8 @@ const Home = () => {
       </div>
       <div className="hosts-area">
         <LongCard
-          title="Meet the Hosts"
-          text="Get to know Armaan Moom and Sagar Garg, the passionate hosts of SPARK Podcast. How they bring their unique perspectives and experiences to every episode, sparking insightful discussions and engaging with inspiring guests."
+          title="Join the Community"
+          text="Join a every growing community of like-minded individuals who are dedicated to making a difference, sharing experiences, and supporting each other’s aspirations. We are here to help you navigate your own journey with confidence."
           variant="right"
         />
       </div>

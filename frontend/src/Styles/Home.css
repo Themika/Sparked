@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   background: #000000;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -36,7 +36,7 @@ html {
   align-items: center;
   width: 90%;
   max-width: 1400px;
-  margin-top: 100px; 
+  margin-top: 100px;
   padding: 50px 0;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
@@ -46,7 +46,7 @@ html {
 
 .left-side {
   flex: 1;
-  color: #ffffff; 
+  color: #ffffff;
   opacity: 0;
   transform: translateY(-50px);
   animation: slideFromTop 1.5s ease-in-out forwards;
@@ -63,12 +63,12 @@ html {
 .left-side p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #6e6eff; 
+  color: #6e6eff;
   text-shadow: 0 0 8px #6e6eff;
 }
 
 .left-side button {
-  background-color: #6e6eff; 
+  background-color: #6e6eff;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -76,12 +76,12 @@ html {
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 10px #6e6eff; 
+  box-shadow: 0 0 10px #6e6eff;
 }
 
 .left-side button:hover {
-  background-color: #5b5be8; 
-  transform: scale(1.05); 
+  background-color: #5b5be8;
+  transform: scale(1.05);
 }
 
 .right-side {
@@ -89,7 +89,7 @@ html {
   text-align: center;
   display: flex;
   justify-content: center;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
   opacity: 0;
   transform: translateY(50px);
@@ -129,13 +129,15 @@ html {
   margin: 0;
 }
 
-.about-area, .why-listen-area{
+.about-area,
+.why-listen-area {
   width: 100%;
   padding: 50px 20px;
   background-color: #6e6eff;
   color: #ffffff;
 }
-.hosts-area, .Join-the-community {
+.hosts-area,
+.Join-the-community {
   width: 100%;
   padding: 50px 20px;
   background-color: #000000;
@@ -144,16 +146,21 @@ html {
 .recent-episodes {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns the h1 to the top left */
-  gap: 20px; /* Adds space between the h1 and the cards */
-  position: relative; /* For positioning the hash effect */
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
   margin: 50px;
+}
+
+.recent-episodes-content {
+  animation: slideInFromRight 1s ease-out forwards;
+  animation: bob 2s infinite ease-in-out;
 }
 
 .recent-episodes-cards {
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping to the next line if there are too many items */
-  gap: 50px; /* Adds space between the items */
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .recent-episodes-h1 {
@@ -161,7 +168,7 @@ html {
   font-weight: bold;
   margin-bottom: 20px;
   letter-spacing: 2px;
-  color: #fff; /* Text color white */
+  color: #fff;
   position: relative;
 }
 
@@ -170,7 +177,7 @@ html {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: #6e6eff; /* Purple underline */
+  background-color: #6e6eff;
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -183,12 +190,31 @@ html {
   top: -20px;
   left: -20px;
   font-size: 100px;
-  color: rgba(110, 110, 255, 0.1); /* Light purple hash */
+  color: rgba(110, 110, 255, 0.1);
   z-index: -1;
 }
 
+.recent-episodes.visible .recent-episodes-content {
+  animation: bob 2s infinite ease-in-out;
+}
 
-
+.recent-episodes .hash1 {
+  content: "";
+  position: absolute;
+  width: 110vw;
+  height: 105%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--purple),
+    #ffffff 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: -10;
+  border-radius: 10px;
+  opacity: 0.2;
+  left: -20%;
+}
 /* Animations */
 
 @keyframes fadeIn {
@@ -241,5 +267,15 @@ html {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
