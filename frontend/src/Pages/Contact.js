@@ -5,7 +5,9 @@ import podcastImage from "../Media/Sparked.png";
 const Contact = () => {
   return (
     <div className="contact-page">
-      <Navbar />
+      <div className="navbar-container">
+        <Navbar />
+      </div>
       <div className="contact-card-container">
         <div className="contact-card">
           <div className="contact-card-components-container">
@@ -16,7 +18,11 @@ const Contact = () => {
                 possible
               </p>
               <form className="contact-form">
-                <input type="text" placeholder="Name" className="contact-form-name" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="contact-form-name"
+                />
                 <input
                   type="email"
                   placeholder="Email"
@@ -31,10 +37,10 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact-right-side">
-              <div className="contact-podcast-image">
-                <img src={podcastImage} alt="Podcast" />
-              </div>
+            <div className="contact-podcast-image">
+              <img src={podcastImage} alt="Podcast" />
             </div>
+          </div>
         </div>
       </div>
     </div>

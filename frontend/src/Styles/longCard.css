@@ -146,14 +146,14 @@
   top: 8rem;
   left: 15%;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: pulse 2s infinite 0.5s; /* Delay for staggering effect */
+  animation: pulse 2s infinite 0.5s; 
 }
 
 .long-card-container.left .long-card-image .hash3 {
   top: 15.5rem;
   left: 20%;
   transform: translate(-66%, 50%) rotate(0deg);
-  animation: pulse 2s infinite 1s; /* Delay for staggering effect */
+  animation: pulse 2s infinite 1s; 
 }
 
 .long-card-container.right .long-card-image .hash1 {
@@ -167,14 +167,14 @@
   top: 8rem;
   left: -45%;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: pulse 2s infinite 0.5s; /* Delay for staggering effect */
+  animation: pulse 2s infinite 0.5s; 
 }
 
 .long-card-container.right .long-card-image .hash3 {
   top: 15.5rem;
   left: -50%;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: pulse 2s infinite 1s; /* Delay for staggering effect */
+  animation: pulse 2s infinite 1s; 
 }
 
 .long-card-image img {

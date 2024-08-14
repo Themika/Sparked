@@ -3,8 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
-  background: #000000; /* Black background to match logo */
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  background: #000000;
+  overflow-x: hidden; 
 }
 html {
   scroll-behavior: smooth;
@@ -36,17 +36,17 @@ html {
   align-items: center;
   width: 90%;
   max-width: 1400px;
-  margin-top: 100px; /* Adjusted margin to account for navbar height */
-  padding: 50px 0; /* Add padding for spacing */
+  margin-top: 100px; 
+  padding: 50px 0;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
   animation-delay: 0.5s;
-  min-height: 80vh; /* Ensure hero container takes up most of the viewport height */
+  min-height: 80vh;
 }
 
 .left-side {
   flex: 1;
-  color: #ffffff; /* White text color */
+  color: #ffffff; 
   opacity: 0;
   transform: translateY(-50px);
   animation: slideFromTop 1.5s ease-in-out forwards;
@@ -63,12 +63,12 @@ html {
 .left-side p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: #6e6eff; /* Neon purple color for text */
+  color: #6e6eff; 
   text-shadow: 0 0 8px #6e6eff;
 }
 
 .left-side button {
-  background-color: #6e6eff; /* Neon purple background for the button */
+  background-color: #6e6eff; 
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -76,12 +76,12 @@ html {
   cursor: pointer;
   font-size: 18px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 0 10px #6e6eff; /* Glow effect */
+  box-shadow: 0 0 10px #6e6eff; 
 }
 
 .left-side button:hover {
-  background-color: #5b5be8; /* Darker shade of neon purple on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #5b5be8; 
+  transform: scale(1.05); 
 }
 
 .right-side {
@@ -89,7 +89,7 @@ html {
   text-align: center;
   display: flex;
   justify-content: center;
-  justify-content: flex-end; /* Push content to the right */
+  justify-content: flex-end; 
   align-items: center;
   opacity: 0;
   transform: translateY(50px);
@@ -132,13 +132,13 @@ html {
 .about-area, .why-listen-area{
   width: 100%;
   padding: 50px 20px;
-  background-color: #6e6eff; /* Dark background for contrast */
+  background-color: #6e6eff;
   color: #ffffff;
 }
 .hosts-area, .Join-the-community {
   width: 100%;
   padding: 50px 20px;
-  background-color: #000000; /* Match the black background for continuity */
+  background-color: #000000;
   color: #ffffff;
 }
 /* Animations */

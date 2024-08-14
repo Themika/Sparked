@@ -1,5 +1,5 @@
 import Navbar from "../Components/Navbar";
-import LongCard from "../Components/LongCard";
+import LongCard from "../Components/longCard";
 import "../Styles/Home.css";
 import { useEffect } from "react";
 
