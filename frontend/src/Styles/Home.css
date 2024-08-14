@@ -129,10 +129,16 @@ html {
   margin: 0;
 }
 
-.section-area {
+.about-area, .why-listen-area{
   width: 100%;
   padding: 50px 20px;
   background-color: #6e6eff; /* Dark background for contrast */
+  color: #ffffff;
+}
+.hosts-area, .Join-the-community {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #000000; /* Match the black background for continuity */
   color: #ffffff;
 }
 /* Animations */
