@@ -9,12 +9,18 @@ const scrollEffect = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+
+          // Add a delay to ensure the slide-in animation completes
+          setTimeout(() => {
+            entry.target.classList.add("show-hash");
+          }, 4000); // Adjust the delay to match the duration of your slide-in animation
         } else {
           entry.target.classList.remove("visible");
+          entry.target.classList.remove("show-hash");
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.01 }
   );
 
   const cardElements = document.querySelectorAll(
