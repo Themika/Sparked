@@ -1,6 +1,7 @@
 import "../Styles/Card.css";
 import Sparked from "../Media/Sparked.png";
-
+import Play from "../Media/Play.svg"
+import Options from "../Media/Options.svg"
 const Card = () => {
   const imageUrl = `url(${Sparked})`;
 
@@ -20,11 +21,11 @@ const Card = () => {
         </p>
         <div className="card-footer">
           <div className="icon">
-            <img src="path-to-play-icon.svg" alt="play icon" />
+            <img src={Play} alt="play icon" />
             <span>47M</span>
           </div>
           <div className="icon">
-            <img src="path-to-more-options-icon.svg" alt="more options icon" />
+            <img src={Options} alt="more options icon" />
           </div>
         </div>
       </div>
