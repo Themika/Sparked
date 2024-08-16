@@ -82,14 +82,14 @@ const Home = () => {
         <LongCard
           title="Why Listen to Spark Podcast?"
           text="Discover stories from individuals who have made a significant impact and let their journeys motivate you to embark on your own path. Access practical advice and strategies that cover leadership, personal growth, and overcoming challenges, helping you navigate your own journey with confidence.Become part of a vibrant community of like-minded individuals dedicated to making a difference, sharing experiences, and supporting each other’s aspirations."
-          variant="left"
+          variant="right"
         />
       </div>
       <div className="hosts-area">
         <LongCard
           title="Join the Community"
           text="Join a every growing community of like-minded individuals who are dedicated to making a difference, sharing experiences, and supporting each other’s aspirations. We are here to help you navigate your own journey with confidence."
-          variant="right"
+          variant="left"
         />
       </div>
     </div>

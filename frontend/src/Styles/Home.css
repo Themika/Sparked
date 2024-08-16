@@ -130,14 +130,13 @@ html {
 }
 
 .about-area,
-.why-listen-area {
+.hosts-area {
   width: 100%;
   padding: 50px 20px;
   background-color: #6e6eff;
   color: #ffffff;
 }
-.hosts-area,
-.Join-the-community {
+.why-listen-area {
   width: 100%;
   padding: 50px 20px;
   background-color: #000000;
@@ -190,7 +189,7 @@ html {
   top: -20px;
   left: -20px;
   font-size: 100px;
-  color: rgba(110, 110, 255, 0.1);
+  color: rgba(110, 110, 255, 0.3);
   z-index: -1;
 }
 
