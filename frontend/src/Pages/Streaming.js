@@ -15,7 +15,7 @@ const StreamingPage = () => {
       </div>
       <div className="trending-area">
         <div className="hash1"></div>
-        <h1>Trending</h1>
+        <h1>Trending Episodes</h1>
         <div className="trending-area-card-container">
           <Card />
           <Card />
