@@ -9,6 +9,7 @@
   font-family: Arial, sans-serif;
   position: relative;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: var(--purple) 2px solid;
 }
 
 .card-container::before {

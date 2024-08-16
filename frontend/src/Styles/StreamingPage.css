@@ -15,28 +15,47 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #0000;
 }
 
 .navbar-container {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .streaming-hero-section {
   width: 100%;
   padding: 3rem 1rem;
-  background: linear-gradient(to right, #ff6a00, #ee0979);
+  background: linear-gradient(to right, var(--purple), var(--black));
   color: white;
   text-align: center;
   margin-top: 5%;
+  border-radius: 15px;
+  height: 25vh;
+  animation: slideIn 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .streaming-hero-section h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   margin-bottom: 1rem;
+  margin-top: 65px;
+  position: relative;
+}
+
+.streaming-hero-section h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .streaming-hero-section p {
@@ -44,39 +63,95 @@ html {
   margin: 0;
 }
 
-.streaming-recent-area,
-.streaming-library-area,
-.streaming-full-library-area {
+.trending-area {
   width: 100%;
-  padding: 2rem 1rem;
-  text-align: center;
-  background-color: #000000;
-  margin-bottom: 2rem;
+  padding: 5rem 1rem;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.streaming-recent-area h2,
-.streaming-library-area h2,
-.streaming-full-library-area h2 {
+
+.trending-area h1 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0;
+  color: #ffffff;
+  position: relative;
+  left: 15px;
+  animation: slideIn 1s ease-in-out;
 }
 
-.cards-container {
+.trending-area h1::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: -10px;
+  width: 29.5%;
+  transform: translateX(-50%);
+  height: 4px;
+  background-color: var(--purple);
+  box-shadow: 0 0 10px rgba(110, 110, 255, 0.7),
+    0 0 20px rgba(110, 110, 255, 0.5);
+  border-radius: 5px;
+}
+
+.trending-area-card-container {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeInUp 1s ease-in-out, bob 2s infinite ease-in-out;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.recent-episodes-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeInUp 1s ease-in-out, bob 2s infinite ease-in-out;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
-.card {
-  width: 300px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
