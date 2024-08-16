@@ -1,12 +1,14 @@
 import "../Styles/eventPage.css"
+import Navbar from "../Components/Navbar"
 
-
-const eventsPage = () => {
+const EventsPage = () => {
     return (
         <div className="event-page-container">
-            hello
+            <div className="navbar-container">
+                <Navbar />
+            </div>
         </div>
     );
 }
  
-export default eventsPage;
+export default EventsPage;
