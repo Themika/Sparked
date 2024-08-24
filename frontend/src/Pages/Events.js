@@ -2,6 +2,7 @@ import "../Styles/eventPage.css";
 import Navbar from "../Components/Navbar";
 import Calendar from "../Components/Calander";
 import Card from "../Components/Card";
+import imageUrl from "../Media/Sparked.png";
 
 const EventsPage = () => {
   return (
@@ -17,9 +18,6 @@ const EventsPage = () => {
           <div className="event-page-right-header">
             <div className="event-page-right-upperhalf">
               <h1 className="recent-events">Recent Events</h1>
-              <div className="recent-events-cards">
-                
-              </div>
             </div>
             <div className="event-page-right-lowerhalf">
               <h1 className="upcoming-events">Upcoming Events</h1>
