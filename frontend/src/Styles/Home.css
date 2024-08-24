@@ -180,7 +180,7 @@ html {
   position: absolute;
   bottom: -5px;
   left: 0;
-  box-shadow: 0 0 8px #8a2be2;
+  box-shadow: 0 0 8px #6e6eff;
 }
 
 .recent-episodes::before {
