@@ -27,7 +27,7 @@ body {
   align-items: stretch;
   justify-content: space-between;
   width: 100%;
-  height: calc(100vh - 60px); 
+  height: calc(100vh - 60px);
 }
 
 .event-page-left,
@@ -38,10 +38,8 @@ body {
 
 .event-page-left {
   flex: 1.5;
-  margin-top: 120px; 
-  height: calc(
-    100vh - 110px
-  ); 
+  margin-top: 150px;
+  height: calc(100vh - 110px);
   display: flex;
   align-items: flex-start;
 }
@@ -59,25 +57,26 @@ body {
   font-size: 2rem;
   margin: 0;
   color: #ffffff;
-  position: relative; 
+  position: relative;
+  text-align: left; /* Align text to the left */
 }
 
 .upcoming-events::before,
 .recent-events::before {
   content: "#";
   position: absolute;
-  font-size: 5rem; 
-  left: -10%;
-  top: -6%;
-  color: rgba(108, 99, 255, 0.3); 
-  z-index: 1; 
+  font-size: 5rem;
+  left: -5%;
+  top: -50%;
+  color: rgba(108, 99, 255, 0.3);
+  z-index: 1;
 }
 
 .upcoming-events::after,
 .recent-events::after {
   content: "";
   display: block;
-  width: 120%;
+  width: 65%;
   height: 4px;
   background-color: #6c63ff;
   margin-top: 4px;
@@ -98,12 +97,23 @@ body {
 .event-page-right-lowerhalf {
   flex: 1;
   display: flex;
+  flex-direction: column; /* Stack elements vertically */
   margin-left: 50px;
   margin-top: 50px;
 }
+.recent-events-container,.upcoming-events-container {
+  display: flex;
+  flex-direction: row; /* Align cards side by side */
+  justify-content: space-around; /* Evenly space the cards */
+  align-items: center;
+  width: 100%;
+  margin-top: 20px; /* Add space between the heading and the container */
+}
 
-
-
+.tiny-card {
+  flex: 1;
+  margin: 0 10px; /* Add some margin between the cards */
+}
 @media (max-width: 700px) {
   .event-page-left {
     height: calc(100vh - 110px);
@@ -112,5 +122,13 @@ body {
   .calendar {
     padding: 50px 20px;
     grid-template-columns: repeat(7, 1fr);
+  }
+
+  .recent-events-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+  }
+
+  .tiny-card {
+    margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }

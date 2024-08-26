@@ -1,6 +1,10 @@
 :root {
   --purple: #6e6eff;
   --black: #000000;
+  --teal: #00bfa6;
+  --dark-gray: #333;
+  --light-gray: #f0f0f0;
+  --white: #ffffff;
 }
 
 @keyframes pulse {

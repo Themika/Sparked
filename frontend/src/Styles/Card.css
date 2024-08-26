@@ -20,7 +20,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: var(--card-image); */
   background-size: cover;
   background-position: center;
   filter: blur(20px);
@@ -98,8 +97,158 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(110, 110, 255, 0.7);
 }
 
-
 .card-container:hover::after {
   opacity: 1;
 }
 
+/* Tiny Card */
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.tiny-card-container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.tiny-card-article {
+  position: relative;
+}
+
+.tiny-card-img {
+  width: 380px;
+  height: 380px;
+  border-radius: 1.5rem;
+}
+
+.tiny-card-data {
+  width: 280px;
+  background-color: #333;
+  padding: 1.5rem 2rem;
+  box-shadow: 0px 12px 30px hsla(0, 0%, 0%, 0.25); 
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: translateY(10rem);
+}
+
+.tiny-card-data .text-content {
+  max-height: 100px; 
+  overflow: hidden; 
+}
+
+.tiny-card-content {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #f0f0f0; 
+  margin-block: 1.5rem;
+}
+
+.tiny-card-title {
+  font-size: 1.6rem; 
+  font-weight: 600; 
+  color: #ffffff; 
+  margin-bottom: 0;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.tiny-card-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: 0;
+}
+
+.tiny-card-date h4 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tiny-card-date span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.tiny-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tiny-card-description h4 {
+  font-size: 1.1rem; 
+  font-weight: 500; 
+  color: #cfcfcf; 
+  margin: 0;
+}
+
+.tiny-card-description span {
+  font-size: 0.9rem;
+  color: #b0b0b0; 
+  opacity: 0.8;
+}
+
+.tiny-card-article:hover .tiny-card-data {
+  animation: bounceIn 0.6s forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tiny-card-article:not(:hover) .tiny-card-data {
+  animation: bounceOut 0.6s forwards;
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-2rem);
+  }
+  60% {
+    transform: translateY(1rem);
+  }
+  80% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-0.5rem);
+  }
+  40% {
+    transform: translateY(1rem);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+}
