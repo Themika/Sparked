@@ -102,16 +102,12 @@
 }
 
 /* Tiny Card */
-.container {
-  display: grid;
-  place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 5rem;
-}
-
 .tiny-card-container {
   display: grid;
   row-gap: 3.5rem;
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+  box-shadow: 0 0 15px 5px rgba(96,92,252, 0.5); /* Added background glow */
 }
 
 .tiny-card-article {
@@ -120,24 +116,30 @@
 
 .tiny-card-img {
   width: 380px;
-  height: 380px;
+  height: 280px;
   border-radius: 1.5rem;
+  transition: transform 0.3s ease-in-out; /* Added transition for smooth scaling */
+}
+
+.tiny-card-img:hover {
+  transform: scale(1.1); /* Changed 'scale' to 'transform: scale' */
 }
 
 .tiny-card-data {
   width: 280px;
   background-color: #333;
-  padding: 1.5rem 2rem;
+  padding: .5rem 2rem;
   box-shadow: 0px 12px 30px hsla(0, 0%, 0%, 0.25); 
   border-radius: 1rem;
   position: absolute;
-  bottom: -7rem;
+  bottom: -10rem;
   left: 0;
   right: 0;
   margin-inline: auto;
   opacity: 0;
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
   transform: translateY(10rem);
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-data .text-content {
@@ -151,6 +153,7 @@
   line-height: 1.5;
   color: #f0f0f0; 
   margin-block: 1.5rem;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-title {
@@ -159,6 +162,7 @@
   color: #ffffff; 
   margin-bottom: 0;
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-date {
@@ -168,23 +172,27 @@
   font-size: 0.8rem;
   opacity: 0.8;
   margin-top: 0;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-date h4 {
   font-size: 0.8rem;
   font-weight: bold;
   margin: 0;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-date span {
   font-size: 0.8rem;
   opacity: 0.8;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-description {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-description h4 {
@@ -192,12 +200,14 @@
   font-weight: 500; 
   color: #cfcfcf; 
   margin: 0;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-description span {
   font-size: 0.9rem;
   color: #b0b0b0; 
   opacity: 0.8;
+  text-align: left; /* Align text to the left */
 }
 
 .tiny-card-article:hover .tiny-card-data {
@@ -215,20 +225,20 @@
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    transform: translateY(10rem);
+    transform: translateY(-6rem);
   }
   40% {
     opacity: 1;
-    transform: translateY(-2rem);
+    transform: translateY(-9rem);
   }
   60% {
-    transform: translateY(1rem);
+    transform: translateY(-8rem);
   }
   80% {
-    transform: translateY(-0.5rem);
+    transform: translateY(-9rem);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-10.1rem); /* Adjusted to end higher up */
   }
 }
 

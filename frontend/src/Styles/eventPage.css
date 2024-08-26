@@ -101,13 +101,91 @@ body {
   margin-left: 50px;
   margin-top: 50px;
 }
-.recent-events-container,.upcoming-events-container {
+/* Shared styles for both arrows */
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  z-index: 2;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   display: flex;
-  flex-direction: row; /* Align cards side by side */
-  justify-content: space-around; /* Evenly space the cards */
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrow::before {
+  content: '';
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(135deg);
+}
+
+.arrow.left {
+  left: 0;
+  transform: rotate(135deg);
+}
+
+.arrow.right {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+/* Container styles for recent and upcoming events */
+.recent-events-container, .upcoming-events-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
   width: 100%;
-  margin-top: 20px; /* Add space between the heading and the container */
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.recent-events-container .arrow, .upcoming-events-container .arrow {
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+.recent-events-container .arrow.right, .upcoming-events-container .arrow.right {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
+/* Hover effect for arrows */
+.arrow:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.arrow.right:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .arrow {
+    display: none;
+  }
+
+  .recent-events-container, .upcoming-events-container {
+    flex-direction: column;
+  }
+
+  .tiny-card {
+    margin: 10px 0;
+  }
+}
+
+
+.recent-events-container .event-card, .upcoming-events-container .event-card {
+  flex: 1; /* Allow cards to grow and fill the container */
+  margin: 0 10px; /* Add space between the cards */
+  max-width: 300px; /* Optional: Set a max width for the cards */
 }
 
 .tiny-card {
