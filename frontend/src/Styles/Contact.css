@@ -56,12 +56,12 @@
   display: block;
   width: 80%;
   height: 4px;
-  background-color: #8a2be2;
+  background-color: #ffffff;
   position: absolute;
   bottom: -5px;
   left: 40%;
   transform: translateX(-50%);
-  box-shadow: 0 0 8px #8a2be2;
+  box-shadow: 0 0 8px #ffffff;
 }
 
 .contact-left-side p {
@@ -112,7 +112,7 @@
   padding: 14px 24px;
   border: none;
   border-radius: 8px;
-  background-color: #8a2be2;
+  background-color: #6c63ff;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -122,9 +122,9 @@
 }
 
 .contact-form button:hover {
-  background-color: #7a1ab4;
+  background-color: #6c63ff;
   transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5);
+  box-shadow: 0 0 8px rgb(77, 71, 152);
 }
 
 .contact-right-side {
