@@ -1,3 +1,24 @@
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
@@ -122,14 +143,15 @@ body {
   overflow: hidden;
   max-width: calc(
     2 * 380px + 40px
-  ); /* Adjust 200px to the width of your TinyCard and 20px to the gap */
-  scroll-behavior: smooth; /* Add smooth scrolling */
+  );
+  scroll-behavior: smooth; 
 }
 
 .upcoming-events-container > span,
 .recent-events-container > span {
   display: inline-block;
   flex: none;
+  animation: bob 1.5s infinite ease-in-out
 }
 
 .upcoming-events-container::-webkit-scrollbar,
@@ -174,7 +196,7 @@ body {
   align-items: center;
   z-index: 10;
   margin-top: 12.5rem;
-  animation: slideInFromRight 0.5s ease-in-out; /* Add animation here */
+  animation: slideInFromRight 0.5s ease-in-out; 
 }
 
 .modal-content {
@@ -206,26 +228,6 @@ body {
   animation: slideOutToRight 0.5s ease-in-out forwards;
 }
 
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slideOutToRight {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
 @media (max-width: 700px) {
   .event-page-left {
     height: auto;
