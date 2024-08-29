@@ -50,6 +50,7 @@ body {
   flex: 1;
   margin-left: 5rem;
   padding-left: 20px;
+  position: relative; /* Added to position the modal absolutely within this container */
 }
 
 .event-page-right-header {
@@ -119,7 +120,9 @@ body {
   gap: 20px;
   padding: 10px 0;
   overflow: hidden;
-  max-width: calc(2 * 380px + 40px); /* Adjust 200px to the width of your TinyCard and 20px to the gap */
+  max-width: calc(
+    2 * 380px + 40px
+  ); /* Adjust 200px to the width of your TinyCard and 20px to the gap */
   scroll-behavior: smooth; /* Add smooth scrolling */
 }
 
@@ -159,6 +162,70 @@ body {
   pointer-events: none;
 }
 
+.modal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 87.75%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  margin-top: 12.5rem;
+  animation: slideInFromRight 0.5s ease-in-out; /* Add animation here */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #5753d6;
+}
+.modal.closing {
+  animation: slideOutToRight 0.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
 @media (max-width: 700px) {
   .event-page-left {
     height: auto;

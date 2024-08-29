@@ -10,6 +10,8 @@ const EventsPage = () => {
 
   const [upcomingScrollPosition, setUpcomingScrollPosition] = useState(0);
   const [recentScrollPosition, setRecentScrollPosition] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEventDate, setSelectedEventDate] = useState(null);
 
   const handleLeftArrowClick = (containerRef, setScrollPosition) => {
     if (containerRef.current) {
@@ -75,6 +77,22 @@ const EventsPage = () => {
     return false;
   };
 
+  const handleEventDateClick = (date) => {
+    setSelectedEventDate(date);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    const modalElement = document.querySelector('.modal');
+    if (modalElement) {
+      modalElement.classList.add('closing');
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setSelectedEventDate(null);
+      }, 500); // Match the duration of the slideOutToRight animation (0.5s)
+    }
+  };
+
   return (
     <div className="event-page-container">
       <div className="navbar-container">
@@ -82,7 +100,7 @@ const EventsPage = () => {
       </div>
       <div className="event-page-container-sides">
         <div className="event-page-left">
-          <Calendar />
+          <Calendar onEventDateClick={handleEventDateClick} />
         </div>
         <div className="event-page-right">
           <div className="event-page-right-header">
@@ -182,6 +200,15 @@ const EventsPage = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>Event Details</h2>
+            <p>Details for event on date: {selectedEventDate}</p>
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

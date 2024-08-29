@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/Calander.css";
 
-const Calendar = () => {
+const Calendar = ({ onEventDateClick }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   const [isFading, setIsFading] = useState(false);
@@ -64,7 +64,11 @@ const Calendar = () => {
     for (let i = 1; i <= daysInMonth; i++) {
       const isEvent = eventDates.includes(i);
       dates.push(
-        <div key={i} className={`date ${isEvent ? "event" : ""}`}>
+        <div
+          key={i}
+          className={`date ${isEvent ? "event" : ""}`}
+          onClick={() => isEvent && onEventDateClick(i)}
+        >
           {i}
         </div>
       );
