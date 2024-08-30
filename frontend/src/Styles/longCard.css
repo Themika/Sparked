@@ -32,13 +32,6 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.long-card-container.left.visible {
-  animation: slideInFromLeft 1s ease-out forwards;
-}
-
-.long-card-container.right.visible {
-  animation: slideInFromRight 1s ease-out forwards;
-}
 
 .long-card-container.left {
   flex-direction: row;
