@@ -2,6 +2,7 @@ import "../Styles/Page Styles/eventPage.css";
 import Navbar from "../Components/Navbar";
 import Calendar from "../Components/Calander";
 import TinyCard from "../Components/TinyCard";
+import Modal from "../Components/Modal";
 import { useRef, useState, useEffect } from "react";
 
 const EventsPage = () => {
@@ -206,28 +207,11 @@ const EventsPage = () => {
           </div>
         </div>
       </div>
-      {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <div className="image-container">
-            </div>
-            <div className="event-info">
-              <p>Date: {selectedEventDate}</p>
-              <p>Guests: <span>Guest 1</span></p>
-              
-            </div>
-            <div className="description">
-              <h2>Event Description: </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Nulla sit amet sollicitudin ipsum. Integer at
-                lacus vitae felis sodales tincidunt.
-              </p>
-            </div>
-            <button onClick={closeModal}>Close</button>
-          </div>
-        </div>
-      )}
+      <Modal
+        isOpen={isModalOpen}
+        selectedEventDate={selectedEventDate}
+        closeModal={closeModal}
+      />
     </div>
   );
 };
