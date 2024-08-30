@@ -1,4 +1,4 @@
-import "../Styles/Card.css";
+import "../Styles/Component Styles/Card.css";
 import image from "../Media/Sparked.png";
 
 const TinyCard = () => {

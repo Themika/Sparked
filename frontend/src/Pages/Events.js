@@ -1,4 +1,4 @@
-import "../Styles/eventPage.css";
+import "../Styles/Page Styles/eventPage.css";
 import Navbar from "../Components/Navbar";
 import Calendar from "../Components/Calander";
 import TinyCard from "../Components/TinyCard";

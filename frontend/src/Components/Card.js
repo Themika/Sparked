@@ -1,4 +1,4 @@
-import "../Styles/Card.css";
+import "../Styles/Component Styles/Card.css";
 import Sparked from "../Media/Sparked.png";
 import Play from "../Media/Play.svg"
 import Options from "../Media/Options.svg"

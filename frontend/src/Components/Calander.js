@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Styles/Calander.css";
+import "../Styles/Component Styles/Calander.css";
 
 const Calendar = ({ onEventDateClick }) => {
   const [currentDate, setCurrentDate] = useState(new Date());

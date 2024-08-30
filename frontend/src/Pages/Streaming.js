@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import "../Styles/StreamingPage.css";
+import "../Styles/Page Styles/StreamingPage.css";
 import Navbar from "../Components/Navbar";
 import Card from "../Components/Card";
 

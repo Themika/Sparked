@@ -1,4 +1,4 @@
-import "../Styles/Contact.css";
+import "../Styles/Page Styles/Contact.css";
 import Navbar from "../Components/Navbar";
 import podcastImage from "../Media/Sparked.png";
 

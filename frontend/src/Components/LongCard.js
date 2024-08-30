@@ -1,4 +1,4 @@
-import "../Styles/longCard.css";
+import "../Styles/Component Styles/Card.css";
 import upArrow from "../Media/Sparked.png";
 
 const LongCard = (props) => {

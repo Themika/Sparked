@@ -1,7 +1,8 @@
 import Card from "../Components/Card";
 import Navbar from "../Components/Navbar";
 import LongCard from "../Components/longCard";
-import "../Styles/Home.css";
+import "../Styles/Page Styles/Home.css";
+import "../Styles/Animation.css"
 import { useEffect } from "react";
 
 const scrollEffect = () => {
@@ -11,10 +12,9 @@ const scrollEffect = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
 
-          // Add a delay to ensure the slide-in animation completes
           setTimeout(() => {
             entry.target.classList.add("show-hash");
-          }, 4000); // Adjust the delay to match the duration of your slide-in animation
+          }, 4000); 
         } else {
           entry.target.classList.remove("visible");
           entry.target.classList.remove("show-hash");
