@@ -26,3 +26,4 @@ yarn-error.log*
 ../frontend/node_modules
 ../frontend/package-lock.json
 ../frontend/package.json
+../frontend/Media

@@ -12,26 +12,29 @@ const StreamingPage = () => {
         <h1>Welcome to Our Podcast</h1>
         <p>Catch up on the latest episodes and explore our full library.</p>
       </div>
-      <div className="trending-area">
-        <div className="hash1"></div>
-        <h1>Trending Episodes</h1>
-        <div className="trending-area-card-container">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+      <div className="content-area">
+        <div className="trending-area">
+          <div className="hash1"></div>
+          <h1>Trending Episodes</h1>
+          <div className="trending-area-card-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <div className="wave"></div>
+          </div>
         </div>
-      </div>
-      <div className="recent-episodes-area">
-        <h1>Recent Episodes</h1>
-        <div className="recent-episodes-card-container">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="recent-episodes-area">
+          <h1>Recent Episodes</h1>
+          <div className="recent-episodes-card-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
+        <div className="full-library-episode"></div>
       </div>
-      <div className="full-library-episode"></div>
     </div>
   );
 };

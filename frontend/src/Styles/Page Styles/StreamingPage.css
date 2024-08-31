@@ -64,14 +64,15 @@ html {
   margin: 0;
   opacity: 0.85;
 }
-
+.content-area {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+}
 .trending-area {
   width: 100%;
   padding: 5rem 1rem;
   color: white;
   text-align: left;
   border-radius: 15px;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
@@ -109,6 +110,38 @@ html {
   backface-visibility: hidden;
   will-change: transform;
 }
+.recent-episodes-area {
+  width: 100%;
+  padding: 5rem 1rem;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+.recent-episodes-area h1 {
+  font-size: 2.5rem;
+  margin: 2.5rem 0;
+  color: #ffffff;
+  position: relative;
+  left: 20px;
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+.recent-episodes-area h1::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: -10px;
+  width: 29.5%;
+  transform: translateX(-50%);
+  height: 4px;
+  background-color: var(--purple);
+  box-shadow: 0 0 10px rgba(110, 110, 255, 0.7),
+    0 0 20px rgba(110, 110, 255, 0.5);
+  border-radius: 5px;
+}
 .recent-episodes-card-container {
   display: flex;
   flex-wrap: wrap;
@@ -132,43 +165,65 @@ html {
   padding: 2rem 0;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Adding a hashed effect background to trending-area and recent-episodes-area */
+.trending-area,
+.recent-episodes-area {
+  position: relative;
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+.trending-area::before,
+.recent-episodes-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 20px;
+  pointer-events: none; /* Ensures the pattern doesn’t interfere with any content */
+  opacity: 0.15;
+  z-index: 1; /* Ensures the hashed effect is behind the content */
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Ensuring the content inside the areas is above the background effect */
+.trending-area > *,
+.recent-episodes-area > * {
+  position: relative;
+  z-index: 2;
 }
 
-@keyframes bob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.wave {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin-top: -50px; /* Pull it up to overlap with the section above */
+  background: none;
+  overflow: hidden;
+}
+
+.wave::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../../Media/wave.svg") no-repeat;
+  background-size: 100vw 100%; /* Ensure the wave covers the full width of the viewport */
+  transform: translate3d(0, 0, 0);
 }
 
 @media (max-width: 768px) {
@@ -203,4 +258,3 @@ html {
     background-attachment: scroll;
   }
 }
-
