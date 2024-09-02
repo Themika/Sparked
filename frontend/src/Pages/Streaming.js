@@ -21,7 +21,6 @@ const StreamingPage = () => {
             <Card />
             <Card />
             <Card />
-            <div className="wave"></div>
           </div>
         </div>
         <div className="recent-episodes-area">
