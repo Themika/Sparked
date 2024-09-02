@@ -128,12 +128,11 @@ html {
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
-  background: linear-gradient(90deg, #000000, #333333); /* Flipped gradient */
+  background: linear-gradient(90deg, #000000, #333333);
   border-top: 4px solid #6e6eff;
   margin-bottom: 2rem;
   border-bottom: 4px solid #6e6eff;
 }
-
 
 .recent-episodes-area h1, .full-library-episode h1 {
   font-size: 2.5rem;
@@ -167,6 +166,7 @@ html {
   backface-visibility: hidden;
   will-change: transform;
 }
+
 .full-library-episode {
   width: 100%;
   padding: 5rem 1rem;
@@ -176,10 +176,10 @@ html {
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
-  background: linear-gradient(90deg, #000000, #333333); /* Flipped gradient */
+  background: linear-gradient(90deg, #000000, #333333);
   border-top: 4px solid #6e6eff;
 }
-/* Adding a hashed effect background to trending-area and recent-episodes-area */
+
 .trending-area,
 .recent-episodes-area {
   position: relative;
