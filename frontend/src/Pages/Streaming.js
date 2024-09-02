@@ -32,7 +32,15 @@ const StreamingPage = () => {
             <Card />
           </div>
         </div>
-        <div className="full-library-episode"></div>
+        <div className="full-library-episode">
+          <h1>Full Library</h1>
+          <div className="full-library-card-container">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </div>
+        </div>
       </div>
     </div>
   );

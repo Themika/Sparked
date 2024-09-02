@@ -27,15 +27,16 @@ html {
 
 .streaming-hero-section {
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 5rem 2rem;
   background: linear-gradient(135deg, #6e6eff, #3e3eff, #000000);
   color: white;
   text-align: center;
   margin-top: 5%;
   border-radius: 15px;
   height: 30vh;
-  animation: slideIn 1s ease-in-out;
+  animation: slideFromTop 1s ease-in-out;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-attachment: fixed;
 }
 
 .streaming-hero-section h1 {
@@ -64,9 +65,13 @@ html {
   margin: 0;
   opacity: 0.85;
 }
+
 .content-area {
+  width: 100%;
+  padding: 2rem;
   background: linear-gradient(90deg, #000000, #1a1a1a);
 }
+
 .trending-area {
   width: 100%;
   padding: 5rem 1rem;
@@ -76,6 +81,9 @@ html {
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(90deg, #000000, #333333);
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #6e6eff;
 }
 
 .trending-area h1 {
@@ -105,11 +113,12 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   animation: fadeInUp 1s ease-in-out, bob 2s infinite ease-in-out;
   backface-visibility: hidden;
   will-change: transform;
 }
+
 .recent-episodes-area {
   width: 100%;
   padding: 5rem 1rem;
@@ -119,8 +128,14 @@ html {
   position: relative;
   overflow: hidden;
   animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(90deg, #000000, #333333); /* Flipped gradient */
+  border-top: 4px solid #6e6eff;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #6e6eff;
 }
-.recent-episodes-area h1 {
+
+
+.recent-episodes-area h1, .full-library-episode h1 {
   font-size: 2.5rem;
   margin: 2.5rem 0;
   color: #ffffff;
@@ -129,7 +144,7 @@ html {
   animation: slideInFromRight 1s ease-in-out;
 }
 
-.recent-episodes-area h1::after {
+.recent-episodes-area h1::after, .full-library-episode h1::after {
   content: "";
   position: absolute;
   left: 15%;
@@ -142,40 +157,38 @@ html {
     0 0 20px rgba(110, 110, 255, 0.5);
   border-radius: 5px;
 }
-.recent-episodes-card-container {
+
+.recent-episodes-card-container,.full-library-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   animation: fadeInUp 1s ease-in-out, bob 2s infinite ease-in-out;
   backface-visibility: hidden;
   will-change: transform;
 }
-.streaming-hero-section {
-  padding: 5rem 2rem;
+.full-library-episode {
+  width: 100%;
+  padding: 5rem 1rem;
+  color: white;
+  text-align: left;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  background: linear-gradient(90deg, #000000, #333333); /* Flipped gradient */
+  border-top: 4px solid #6e6eff;
 }
-
-.trending-area-card-container {
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-
-.recent-episodes-card-container {
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-
 /* Adding a hashed effect background to trending-area and recent-episodes-area */
 .trending-area,
 .recent-episodes-area {
   position: relative;
-  background: linear-gradient(90deg, #000000, #1a1a1a);
   border-radius: 15px;
   overflow: hidden;
 }
 
 .trending-area::before,
-.recent-episodes-area::before {
+.recent-episodes-area::before, .full-library-episode::before {
   content: "";
   position: absolute;
   top: 0;
@@ -193,18 +206,16 @@ html {
     transparent
   );
   background-size: 20px 20px;
-  pointer-events: none; 
+  pointer-events: none;
   opacity: 0.15;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .trending-area > *,
-.recent-episodes-area > * {
+.recent-episodes-area > *, .full-library-episode > * {
   position: relative;
   z-index: 2;
 }
-
-
 
 @media (max-width: 768px) {
   .streaming-hero-section {
@@ -227,14 +238,5 @@ html {
   .trending-area-card-container .card,
   .recent-episodes-card-container .card {
     padding: 0.75rem;
-  }
-}
-.streaming-hero-section {
-  background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-  .streaming-hero-section {
-    background-attachment: scroll;
   }
 }
